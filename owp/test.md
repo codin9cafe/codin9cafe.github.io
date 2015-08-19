@@ -5,7 +5,7 @@
 1.Problem // 원하는것.
   - who? // 누구의 문제인가?
   - what? // 하고 싶은것?
-  >WHAT
+      > WHAT
   - why? // 왜 하고 싶어 하는가?
     > WHY
 
