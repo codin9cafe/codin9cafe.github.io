@@ -17,8 +17,7 @@
 
 - Soultion // how to question에 대한 해결전략.
   - 해결전략
-  > 해결전략
-
+  > aaa
 - Do & Feedback // 해결방안 실행 (솔루션 구현, 테스트, 설문 등)
   - goal
     > 해결전략 실행 목표
