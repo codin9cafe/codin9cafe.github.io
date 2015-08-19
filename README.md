@@ -1,7 +1,7 @@
 # codin9cafe.github.io
 
-- [ ] a task list item
-- [ ] list syntax required
-- [ ] normal **formatting**, @mentions, #1234 refs
-- [ ] incomplete
-- [x] completed
+- [x] a task list item
+- [x] list syntax required
+- [x] normal **formatting**, @mentions, #1234 refs
+- [x] incomplete
+- [ ] completed
