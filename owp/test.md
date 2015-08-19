@@ -4,7 +4,7 @@
 
 - Problem // 원하는것.
   - who? // 누구의 문제인가?
-    > WHO
+  > WHO
 
   - what? // 하고 싶은것?
     > WHAT
