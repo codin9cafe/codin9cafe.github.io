@@ -5,10 +5,13 @@
 - Problem // 원하는것.
   - who? // 누구의 문제인가?
     > WHO
+
   - what? // 하고 싶은것?
     > WHAT
+
   - why? // 왜 하고 싶어 하는가?
     > WHY
+
   - how to question.
     > 어떻게 하면 who가 what하는것을 가능하게 할까?
 
