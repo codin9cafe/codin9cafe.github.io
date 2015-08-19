@@ -4,8 +4,11 @@
 
 1.Problem (누가 무엇을 왜 원하는가?)
   - who?
+
   - what?
+
   - why?
+
     > the reason is ...
 
 2.Soultion (어떻게 하면 원하는것을 제공할 수 있는가?)
