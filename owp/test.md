@@ -11,10 +11,13 @@
     > WHY
   - how to question.
     > 어떻게 하면 who가 what하는것을 가능하게 할까?
+
 - Soultion // how to question에 대한 해결전략.
   - 해결전략
-    > 해결전략.
+    > 해결전략
+
 - Do & Feedback // 해결방안 실행 (솔루션 구현, 테스트, 설문 등)
-  - 
+  - goal
+    > 해결전략 실행 목표
 
 ### W2 (2015.
