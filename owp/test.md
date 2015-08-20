@@ -10,7 +10,7 @@
   - what is their pain(or enemy)? // the reason is...
     - why? the reason is...
   - what do you want? 해결방법을 만들고 싶다.
-    - why?
+    - why? 세상은 소프트웨어 개발자를 원하고 있다. 소프트웨어 개발자로 행복하게 사는 문화를 만들고 싶다.
     
 2.Soultion
 
