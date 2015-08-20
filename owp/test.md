@@ -5,7 +5,7 @@
 1.Problem
 
   - whose problem?
-  codin9cafe members.
+    codin9cafe members.
     
   - what does they want?
   행복한 개발자? 취업? 창업?
