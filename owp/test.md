@@ -12,20 +12,20 @@
 
     > 행복한 개발자? 취업? 창업?
     
-    > why? 
+    - why? 
 
   - what is their pain(or enemy)?
    
     > 학습의 어려움? 좀 더 명확하게!!!
 
-    > why?
+    - why?
       > the reason is...
   
   - what do you want? 
 
     > 해결방법을 만들고 싶다.
     
-    > why?
+    - why?
       > ...
     
   
