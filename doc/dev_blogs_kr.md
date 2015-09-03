@@ -1,4 +1,4 @@
-devloper blogs
+developer blogs
 
 helloworld@naver
 http://d2.naver.com/helloworld
