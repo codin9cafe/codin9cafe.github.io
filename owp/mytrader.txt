@@ -1,0 +1,234 @@
+
+#1 enterTrade
+T0441 // 미결제약정 // 잔고가 있는지 확인한다.
+
+if(미결제약정) {
+
+  진입완료되었음.
+  goto clearTrade
+
+}
+else {
+
+  //미체결 T0434로 조회해서, 미체결 주문이 있는지 확인한다.
+
+  //미체결주문 있는가? // 주문은 했는데 wait하고 있는것이 있는가?
+  //check if there is 미체결 주문정보 // T0434
+  if(미체결주문정보) {
+
+    주문 진행중.
+    if(order.wait > 10sec) {
+      notify to cancel!!!
+      return;
+    }
+
+  }
+  else // 미결제 약정도 없고, 미체결 주문이 없다는것은 주문을 하지 않았다는것. 주문한다.
+  {
+
+    //1.position
+    //2.order
+    //3.check result
+    if(success) {
+      go to clearTrade
+    } else {
+      // show error!!!
+    }
+
+    enter한 정보도 없고, 미결제된것도 없다.
+    // 주문요청을 보낸후에 미결제 정보 안보이는 경우가 있는가? //
+    // 주문요청을 보내고 나서 접수확인을 해야 한다.!!!
+
+    //try order!!!
+    //
+  }
+
+  주문 정보가 있는지 확인한다.
+
+
+}
+
+
+
+-----------------
+### order ###
+status: // success or wait // //'완료' // 미체결
+position: buy, sell
+price:'225.05'
+quantity:
+
+if(order!= null) {
+  if(status == 'wait' && ) {
+    if(currentTime - orderTime > 10sec)
+      주문을 수동으로 취소하거나 기다리거나 하는 작업을 사람이 판단한다.
+    else
+      break;
+    return;
+  }
+} else {
+  do #2
+  #2 do enterOrder
+  // 포지션 결정 or 기존 포지션으로 진행?
+  if(order == null) {
+    포지션 결정을 위한 시물레이션 진행
+    position 결정 후 enterOrder 진행
+    order 진행 후 #1 수행
+  }
+}
+
+
+#2 clearWork
+if(order != null) {
+
+} else {
+  order cleared
+}
+
+
+현재가를 가져와서 clear 여부 판단.
+clear일 경우,
+clear order 수행.
+
+---
+buy ok: 00040
+sell ok: 00039
+---
+
+CFOAT00100ReceiveData: 매매, 주문번호:
+[2015-08-24 14:30:22Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 14:30:04Z] CFOAT00100ReceiveData: 매매, 주문번호:
+[2015-08-24 14:30:04Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+
+---
+
+[2015-08-24 14:12:10Z] CFOAT00100ReceiveData: 매매, 주문일련번호:
+[2015-08-24 14:12:10Z] SUCCESS // isError:False, Code:00000, Message:모의투자 주문 실패(실시간 상/하한가 오류)
+[2015-08-24 14:12:07Z] CFOAT00100ReceiveData: 매매, 주문일련번호:
+[2015-08-24 14:12:07Z] SUCCESS // isError:False, Code:00000, Message:모의투자 주문 실패(실시간 상/하한가 오류)
+[2015-08-24 14:11:33Z] CFOAT00100ReceiveData: 매매, 주문일련번호:
+[2015-08-24 14:11:33Z] SUCCESS // isError:False, Code:00000, Message:모의투자 주문 실패(실시간 상/하한가 오류)
+[2015-08-24 14:11:21Z] 종목명(F 1509),종목코드(101K9000),상한가(246.40),하한가(209.90),전일종가(228.15),전일고가(228.50),전일저가(226.05)
+[2015-08-24 14:11:21Z] T8432 // 지수선물 마스터 조회
+[2015-08-24 14:11:21Z] fuction startTrade
+[2015-08-24 14:11:20Z] account number:55551014071*
+[2015-08-24 14:11:20Z] account number:55551014071
+[2015-08-24 14:11:20Z] login event:(0000)로그인 성공
+[2015-08-24 14:11:19Z] account number:
+[2015-08-24 14:11:19Z] ok login request.
+[2015-08-24 14:11:19Z] ok connect:demo.etrade.co.kr:20001
+[2015-08-24 14:11:17Z] fuction login
+
+
+---
+
+[2015-08-24 14:07:10Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 14:07:10Z] SUCCESS // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 14:00:39Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 14:00:39Z] SUCCESS // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 13:58:24Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 13:58:24Z] SUCCESS // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 13:56:26Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 13:56:26Z] SUCCESS // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 13:56:13Z] 종목명(F 1509),종목코드(101K9000),상한가(246.40),하한가(209.90),전일종가(228.15),전일고가(228.50),전일저가(226.05)
+[2015-08-24 13:56:12Z] T8432 // 지수선물 마스터 조회
+[2015-08-24 13:56:09Z] fuction startTrade
+[2015-08-24 13:56:08Z] account number:55551014071*
+[2015-08-24 13:56:08Z] account number:55551014071
+[2015-08-24 13:56:08Z] login event:(0000)로그인 성공
+[2015-08-24 13:56:08Z] account number:
+[2015-08-24 13:56:08Z] ok login request.
+[2015-08-24 13:56:08Z] ok connect:demo.etrade.co.kr:20001
+[2015-08-24 13:56:06Z] fuction login
+
+
+---
+[2015-08-24 15:03:52Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:52Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:52Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:52Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:52Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:52Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:48Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:47Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:47Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:47Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:47Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:47Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:47Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:47Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:47Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:47Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:46Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:46Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:46Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:46Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:46Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:46Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:46Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:46Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:45Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:45Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:45Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:45Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:45Z] CFOAT00100ReceiveData: 매매, 주문일련번호:
+[2015-08-24 15:03:45Z] Order Request Success! // isError:False, Code:01221, Message:모의투자 증거금부족으로 주문이 불가능합니다
+[2015-08-24 15:03:45Z] CFOAT00100ReceiveData: 매매, 주문일련번호:
+[2015-08-24 15:03:45Z] Order Request Success! // isError:False, Code:01221, Message:모의투자 증거금부족으로 주문이 불가능합니다
+[2015-08-24 15:03:44Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:44Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:44Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:44Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:44Z] CFOAT00100ReceiveData: 매매, 주문일련번호:
+[2015-08-24 15:03:44Z] Order Request Success! // isError:False, Code:01221, Message:모의투자 증거금부족으로 주문이 불가능합니다
+[2015-08-24 15:03:43Z] CFOAT00100ReceiveData: 매매, 주문일련번호:
+[2015-08-24 15:03:43Z] Order Request Success! // isError:False, Code:01221, Message:모의투자 증거금부족으로 주문이 불가능합니다
+[2015-08-24 15:03:43Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:43Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:43Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:43Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:43Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:43Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:42Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:42Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:42Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:42Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:42Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:42Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:42Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:42Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:42Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:42Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:41Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:41Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:41Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:41Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:41Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:41Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:41Z] CFOAT00100ReceiveData: 매매, 주문일련번호:
+[2015-08-24 15:03:41Z] Order Request Success! // isError:False, Code:01111, Message:모의투자 주문처리가 안되었습니다. 재시도 바랍니다.
+[2015-08-24 15:03:40Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:40Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:40Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:40Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:40Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:40Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:39Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:39Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:39Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:39Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:39Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:39Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:39Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:39Z] Order Request Success! // isError:False, Code:00039, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:39Z] CFOAT00100ReceiveData: 매매, 주문일련번호:0
+[2015-08-24 15:03:39Z] Order Request Success! // isError:False, Code:00040, Message:모의투자 정상처리 되었습니다
+[2015-08-24 15:03:38Z] 종목명(F 1509),종목코드(101K9000),상한가(246.40),하한가(209.90),전일종가(228.15),전일고가(228.50),전일저가(226.05)
+[2015-08-24 15:03:38Z] T8432 // 지수선물 마스터 조회
+[2015-08-24 15:03:38Z] fuction startTrade
+[2015-08-24 15:03:37Z] account number:55551014071*
+[2015-08-24 15:03:37Z] account number:55551014071
+[2015-08-24 15:03:37Z] login event:(0000)로그인 성공
+[2015-08-24 15:03:36Z] account number:
+[2015-08-24 15:03:36Z] ok login request.
+[2015-08-24 15:03:36Z] ok connect:demo.etrade.co.kr:20001
+[2015-08-24 15:03:34Z] fuction login
